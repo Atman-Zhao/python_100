@@ -1,0 +1,52 @@
+# class Student(object):
+#     # __init__是一个特殊方法用于创建对象时进行初始化操作
+#     # 通过这个方法我们可以为学生绑定name和age两个属性
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def study(self, course_name):
+#         print('%s is studying %s' % (self.name, course_name))
+#         print(f'{self.name} is studying {course_name}')
+#
+#     def watch_movie(self):
+#         if self.age < 18:
+#             print(f'{self.name}只能看熊出没大电影')
+#         else:
+#             print(f'{self.name} watch whatever you like')
+#
+# def main():
+#     # 创建学生对象并指定姓名和年龄
+#     stu1 = Student('骆昊', 38)
+#     # 给对象发study消息
+#     stu1.study('Python程序设计')
+#     # 给对象发watch_av消息
+#     stu1.watch_movie()
+#     stu2 = Student('王大锤', 15)
+#     stu2.study('思想品德')
+#     stu2.watch_movie()
+#
+#
+# if __name__ == '__main__':
+#     main()
+#
+class Test:
+
+    def __init__(self, foo):
+        self.__foo = foo
+
+    def __bar(self):
+        print(self.__foo)
+        print('__bar')
+
+
+def main():
+    test = Test('hello')
+    # AttributeError: 'Test' object has no attribute '__bar'
+    test.__bar()
+    # AttributeError: 'Test' object has no attribute '__foo'
+    print(test.__foo)
+
+
+if __name__ == "__main__":
+    main()
